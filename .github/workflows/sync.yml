@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '*/15 * * * *'
   workflow_dispatch:
+concurrency:
+  group: timetree-sync
+  cancel-in-progress: false
 
 jobs:
   sync:
